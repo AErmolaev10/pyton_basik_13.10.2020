@@ -13,4 +13,3 @@ minute = (seconds % hour_include_seconds) // minute_include_seconds
 sec = (seconds % hour_include_seconds) % minute_include_seconds
 
 print(hours,minute,sec, sep=':')
-

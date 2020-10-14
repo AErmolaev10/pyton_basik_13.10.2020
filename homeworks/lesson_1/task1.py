@@ -15,4 +15,3 @@ new_age = input('Ваш возраст')
 
 
 print('Новый студент ' + new_name + ' ' + new_surname + ' возраст ' + new_age + ' зарегистрирован.')
-
