@@ -9,17 +9,15 @@ expenses = int(input('Введите издержки фирмы'))
 
 profit = revenue - expenses
 profitability = profit / revenue
-
+profitability_print = f'Рентабельность выручки {profitability:0.2f}'
 
 if profit > 0:
-    print('Рентабельность выручки' + str(profitability))
+    print(profitability_print)
     staff = int(input('Введите количество сотрудников фирмы'))
     profit_staff = profit / staff
-    print('Прибыль фирмы в расчете на одного сотрудника равна' + str(profit_staff))
+    profit_staff_print = f'Прибыль фирмы в расчете на одного сотрудника равна {profit_staff:0.2f}'
+    print(profit_staff_print)
 else:
     print('У вас нет прибыли')
 
-"""
-Хотел применить .ToFixed bkb %.2f к profitability, но возникала ошибка: 'float' object has no attribute 'ToFixed'
-Как здесь можно ограничить кол-во знаков после запятой
-"""
+
