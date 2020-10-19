@@ -19,3 +19,45 @@
 “ед”: [“шт.”]
 }
 """
+
+product_list = []
+product_dict = {}
+
+while True:
+    product_dict['название'] = input('Введите название товара')
+    product_dict['цена'] = input('Введите цену товара')
+    product_dict['количество'] = input('Введите количество товара')
+    product_dict['eд'] = input('Введите еденицу измерения товара')
+    product_list.append(product_dict)
+    q = input('Для выхода введите "q", для продолжения Enter')
+    if q == 'q':
+        break
+
+n = 1
+tuple_list = []
+for item in product_list:
+    product_tuple= (n, item)
+    tuple_list.append(product_tuple)
+    n = n+1
+
+print(tuple_list)
+
+name = set()
+price = set()
+amount = set()
+measure = set()
+
+for item in product_list:
+    m = (item.get('ед'))
+    n = (item.get('название'))
+    p = (item.get('цена'))
+    a = (item.get('количество'))
+
+    name.add(n)
+    price.add(p)
+    amount.add(a)
+    measure.add(m)
+
+
+analytic_dict = {'название': name, 'цена': price, 'количество': amount, 'eд': measure}
+print(analytic_dict)
