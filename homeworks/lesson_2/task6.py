@@ -21,13 +21,25 @@
 """
 
 product_list = []
-product_dict = {}
+name = []
+price = []
+amount = []
+measure = []
 
 while True:
+    product_dict = {}
     product_dict['название'] = input('Введите название товара')
+    n = product_dict.get('название')
     product_dict['цена'] = input('Введите цену товара')
+    p = product_dict.get('цена')
     product_dict['количество'] = input('Введите количество товара')
-    product_dict['eд'] = input('Введите еденицу измерения товара')
+    a = product_dict.get('количество')
+    product_dict['ед'] = input('Введите еденицу измерения товара')
+    m = product_dict.get('ед')
+    name.append(n)
+    price.append(p)
+    amount.append(a)
+    measure.append(m)
     product_list.append(product_dict)
     q = input('Для выхода введите "q", для продолжения Enter')
     if q == 'q':
@@ -36,28 +48,15 @@ while True:
 n = 1
 tuple_list = []
 for item in product_list:
-    product_tuple= (n, item)
+    product_tuple = (n, item)
     tuple_list.append(product_tuple)
-    n = n+1
+    n = n + 1
 
 print(tuple_list)
 
-name = set()
-price = set()
-amount = set()
-measure = set()
-
-for item in product_list:
-    m = (item.get('ед'))
-    n = (item.get('название'))
-    p = (item.get('цена'))
-    a = (item.get('количество'))
-
-    name.add(n)
-    price.add(p)
-    amount.add(a)
-    measure.add(m)
-
-
-analytic_dict = {'название': name, 'цена': price, 'количество': amount, 'eд': measure}
+analytic_dict = {'название': name, 'цена': price, 'количество': amount, 'ед': measure}
 print(analytic_dict)
+
+'''
+Можно было удалить дубликаты из analytic_dict, но в условиях задачи это не было прописано, хотя в примере нет дубликатов
+'''
