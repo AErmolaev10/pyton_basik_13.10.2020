@@ -3,3 +3,20 @@
 город проживания, email, телефон. Функция должна принимать параметры как именованные аргументы.
 Реализовать вывод данных о пользователе одной строкой.
 """
+
+
+def user(name=None, surname=None, birth=None, city=None, email=None, phone=None):
+    """Функция, принимающая данные пользователя"""
+
+    name = input('Введите имя')
+    surname = input('Введите фамилию')
+    birth = input('Введите год рождения')
+    city = input('Введите город проживания')
+    email = input('Введите e-mail')
+    phone = input('Введите телефон')
+
+    return f'Имя - {name}, фамилия - {surname}, год рождения - {birth}, город проживания - {city}, e-mail - {email}' \
+           f', телефон -{phone}'
+
+
+print(user())
