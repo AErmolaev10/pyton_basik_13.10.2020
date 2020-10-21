@@ -11,7 +11,7 @@ def my_func(x, y):
     return x ** y
 
 
-print(my_func(4, -2))
+print(my_func(10, -3))
 
 
 
@@ -19,12 +19,11 @@ def my_func2():
     x = int(input('Введите положительное число, которое нужно возвести в степень'))
     y = int(input('Введите отрицательную степень'))
     n = -1
-    z = 1 / x
     t = 1
     while n >= y:
-        t = t * z
+        t = t * x
         n = n - 1
-    return t
+    return 1 / t
 
 
 print(my_func2())
