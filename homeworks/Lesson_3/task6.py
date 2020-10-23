@@ -6,3 +6,12 @@
 с заглавной буквы. Необходимо использовать написанную ранее функцию int_func()
 """
 
+
+def int_func(text):
+    return text.title()
+
+
+print(int_func('python'))
+
+text = input('Введите слова через пробел').lower()
+print(int_func(text))
