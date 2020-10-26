@@ -9,16 +9,16 @@ from itertools import count
 from math import factorial
 
 
-def fibo_gen():
+def my_gen():
     for el in count(1):
         yield factorial(el)
 
 
-gen = fibo_gen()
-x = 0
+gen = my_gen()
+c = 0
 for i in gen:
-    if x < 15:
+    if c < 10:
         print(i)
-        x += 1
+        c += 1
     else:
         break

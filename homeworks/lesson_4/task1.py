@@ -4,9 +4,13 @@
 конкретных значений необходимо запускать скрипт с параметрами.
 """
 from sys import argv
-script_name, output, rate, bonus = argv
+
+name, time, salary, bonus = argv
 try:
-    salary = float(output) * float(rate) + float(bonus)
-    print(f'{script_name} Заработная плата сотрудника: {salary}')
+    time = int(time)
+    salary = int(salary)
+    bonus = int(bonus)
+    res = time * salary + bonus
+    print(f'заработная плата сотрудника  {res}')
 except ValueError:
-    print('Неверные данные')
+    print('Вы ввели неверные данные')
