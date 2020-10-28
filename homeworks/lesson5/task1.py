@@ -6,10 +6,10 @@
 file = open('task1.txt', 'w')
 
 while True:
-    line = input('write new line') + '\n'
-    file.writelines(line)
-    if line.strip() == "":
+    line = input('write new line')
+    if not line:
         break
+    file.writelines(line + '\n')
 
 file.close()
 
