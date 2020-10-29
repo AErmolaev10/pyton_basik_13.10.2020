@@ -6,10 +6,10 @@
 my_file = open('viki.txt', 'r')
 
 content = my_file.readlines()
-print(f'Количество строк в файле - {len(content)}')
+print(f'Number of lines in the file - {len(content)}')
 
 my_file = open('viki.txt', 'r')
 content = my_file.read().split()
-print(f'Общее количество слов - {len(content)}')
+print(f'Total number of words - {len(content)}')
 
 my_file.close()
