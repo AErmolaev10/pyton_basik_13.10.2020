@@ -17,19 +17,15 @@ class Clothes:
         self.v = v
         self.h = h
 
-    @property
-    def get_sq_full(self):
-        return f'Общий расход ткани \n {Clothes.cloth}'
-
-    def __str__(self):
-        return f'Общий расход ткани {self.square_c}'
-
 
 class Coat(Clothes):
     def __init__(self, v, h):
         super().__init__(v, h)
         self.square_c = round(self.v / 6.5 + 0.5)
         Clothes.cloth.append(self.square_c)
+
+    def __str__(self):
+        return f'Общий расход ткани {self.square_c}'
 
 
 class Jacket(Clothes):
@@ -51,5 +47,3 @@ print(jacket)
 print(coat2)
 print(jacket2)
 print(f'Общий расход ткани {sum(Clothes.cloth)}')
-
-
