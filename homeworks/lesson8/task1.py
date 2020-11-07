@@ -9,6 +9,9 @@
 class Date:
     @classmethod
     def num(cls, arg):
+        """должен извлекать число, месяц, год и преобразовывать их тип к типу «Число»
+        :return - список с числами[дд, мес, год]"""
+
         my_list = arg.split('-')
         new_list = []
         for idx in my_list:
@@ -17,6 +20,9 @@ class Date:
 
     @staticmethod
     def val(arg):
+        """ должен проводить валидацию числа, месяца и года
+        :return - True or False"""
+
         a = Date.num(arg)
         return all([31 > a[0] > 0, 13 > a[1] > 0, 2021 > a[2] > 0])
 
